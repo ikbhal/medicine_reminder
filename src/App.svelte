@@ -53,7 +53,7 @@ function deleteCustomer(id){
 	console.log("remove customer id:", id);
 	db.collection("medicine-reminder-customer").doc(id).delete().then(() => {
 		console.log("Document successfully deleted!");
-		loadBathList();
+		loadCustomerList();
 	}).catch((error) => {
 		console.error("Error removing document: ", error);
 	});
@@ -80,7 +80,7 @@ function deleteCustomer(id){
 <div class="customerList">
 	{#each $customerList as customer}
 		<div>
-			{customer.bathDate} <br/>
+			Created:{customer.date} <br/>
 			Name: {customer.name}<br/>
 			Mobile: {customer.mobileNumber} <br/>
 			Time: {customer.remindingTime} <br/>
