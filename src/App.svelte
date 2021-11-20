@@ -25,7 +25,7 @@ async function loadCustomerList(){
 		list.push(customer);
    		console.log(doc.id, '=>', doc.data());
   	}
-	bathList.set(list);
+	customerList.set(list);
 }
 
 onMount(async () => {
